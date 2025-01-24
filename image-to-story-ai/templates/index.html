@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Story AI</title>
+</head>
+<body>
+    <h1>Image to Story Generator</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Generate Story</button>
+    </form>
+    {% if image_path %}
+    <h2>Caption:</h2>
+    <p>{{ caption }}</p>
+    <h2>Story:</h2>
+    <p>{{ story }}</p>
+    <img src="{{ image_path }}" alt="Uploaded Image" style="max-width: 300px;">
+    {% endif %}
+</body>
+</html>
