@@ -21,11 +21,15 @@ def generate_caption(image_path):
 # Generate Story using GPT
 from transformers import pipeline
 
+from transformers import pipeline
+
+from transformers import pipeline
+
 def generate_story(caption):
     try:
         # Use GPT-2 to generate the story
         story_generator = pipeline("text-generation", model="gpt2")
-        story = story_generator(caption, max_length=150, num_return_sequences=1)
+        story = story_generator(caption, max_length=300, num_return_sequences=1)
         return story[0]["generated_text"]
     except Exception as e:
         return f"An error occurred: {e}"
