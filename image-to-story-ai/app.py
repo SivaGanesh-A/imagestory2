@@ -60,4 +60,4 @@ def generate_story_page():
     return render_template("story_result.html", image_path=image_path, caption=caption, story=story)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
