@@ -56,7 +56,7 @@ def generate_story_page():
     caption = request.args.get('caption')
     story = request.args.get('story')
 
-    # Render the result page with the story, caption, and image only (no input form)
+    # Render the result page with the story, caption, and image only (no input form).
     return render_template("story_result.html", image_path=image_path, caption=caption, story=story)
 
 if __name__ == "__main__":
